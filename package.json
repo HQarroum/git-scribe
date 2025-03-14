@@ -32,17 +32,17 @@
     "url": "https://github.com/HQarroum/git-scribe/issues"
   },
   "dependencies": {
-    "@ai-sdk/openai": "^1.2.4",
+    "@ai-sdk/openai": "^1.2.5",
     "@clack/prompts": "^0.10.0",
     "@mendable/firecrawl-js": "^1.19.1",
     "@mermaid-js/mermaid-cli": "^11.4.2",
     "@tavily/core": "^0.3.1",
-    "ai": "^4.1.60",
+    "ai": "^4.1.61",
     "cli-table3": "^0.6.5",
     "commander": "^13.1.0",
     "gradient-string": "^3.0.0",
     "marked": "^15.0.7",
-    "repomix": "^0.2.38",
+    "repomix": "^0.2.39",
     "simple-git": "^3.27.0",
     "tiktoken": "^1.0.20",
     "zod": "^3.24.2"
