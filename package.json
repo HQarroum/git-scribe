@@ -1,0 +1,55 @@
+{
+  "name": "git-scribe",
+  "version": "0.0.5",
+  "description": "Chain-of-Agents based article generation based on repository analysis.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "git-scribe": "./dist/index.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "files": [
+    "dist/"
+  ],
+  "keywords": [
+    "git",
+    "scribe",
+    "ai",
+    "generative-ai",
+    "llm",
+    "code-analysis",
+    "cli"
+  ],
+  "author": "Halim Qarroum <hqm.post@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/HQarroum/git-scribe",
+  "bugs": {
+    "url": "https://github.com/HQarroum/git-scribe/issues"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^1.2.4",
+    "@clack/prompts": "^0.10.0",
+    "@mendable/firecrawl-js": "^1.19.1",
+    "@mermaid-js/mermaid-cli": "^11.4.2",
+    "@tavily/core": "^0.3.1",
+    "ai": "^4.1.60",
+    "cli-table3": "^0.6.5",
+    "commander": "^13.1.0",
+    "gradient-string": "^3.0.0",
+    "marked": "^15.0.7",
+    "repomix": "^0.2.38",
+    "simple-git": "^3.27.0",
+    "tiktoken": "^1.0.20",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}
