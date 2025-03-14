@@ -11,7 +11,8 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "deploy": "npm publish ."
   },
   "files": [
     "dist/"
