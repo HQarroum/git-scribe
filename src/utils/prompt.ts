@@ -1,6 +1,7 @@
 import Table from 'cli-table3';
 
 import { Plan } from '../data-models/plan.js';
+import { Review } from '../data-models/review.js';
 import {
   log,
   isCancel,
@@ -13,7 +14,6 @@ import {
   LogMessageOptions,
   SpinnerOptions
 } from '@clack/prompts';
-import { Review } from '../data-models/review.js';
 
 /**
  * The types for the cancellable options.
@@ -83,7 +83,7 @@ export const displayCodeDetails = ({
   const table = new Table({
     head: ['Token Size', 'Character Size'],
   });
-  
+
   table.push([
     `${totalTokens > 0 ? totalTokens : 'Unknown'} tokens`,
     `${code.length} characters`
@@ -100,7 +100,7 @@ export const displayPlan = (plan: Plan) => {
   const table = new Table({
     head: ['Sections', 'Length'],
   });
-  
+
   log.step('Plan');
   for (let i = 0; i < plan.plan.length; i++) {
     table.push([

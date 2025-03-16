@@ -44,7 +44,7 @@ if (!process.env.TAVILY_API_KEY) {
 
 /**
  * Ensures the output directory exists.
- * @param path the path to the directory.
+ * @param {string} path the path to the directory.
  */
 const createIfNotExists = (path: string) => {
   if (!fs.existsSync(path)) {

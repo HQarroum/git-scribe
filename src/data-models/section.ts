@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 /**
- * The schema for the step object.
+ * The schema for a section object.
  */
 export const SectionSchema = z.object({
   index: z

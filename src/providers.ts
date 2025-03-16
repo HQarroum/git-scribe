@@ -41,6 +41,5 @@ export const provider = customProvider({
 
     // Model used to correct invalid syntax.
     'syntax-model': openai('gpt-4o-mini')
-  },
-  fallbackProvider: openai
+  }
 });

@@ -5,7 +5,8 @@ import { AskQuestionInputSchema } from './schema.js';
 import { cancellable } from '../../utils/prompt.js';
 
 /**
- * The `ask-question` tool.
+ * The `ask-question` tool provides an LLM with the ability
+ * to ask open questions to users through the terminal.
  */
 export const askQuestion = tool({
   description: 'Asks an open question to the user.',

@@ -1,5 +1,5 @@
 {
-  "name": "git-scribe",
+  "name": "git-scribe-cli",
   "version": "0.0.5",
   "description": "Chain-of-Agents based article generation based on repository analysis.",
   "type": "module",
@@ -35,7 +35,7 @@
   "dependencies": {
     "@ai-sdk/openai": "^1.2.5",
     "@clack/prompts": "^0.10.0",
-    "@mendable/firecrawl-js": "^1.19.1",
+    "@mendable/firecrawl-js": "^1.19.2",
     "@mermaid-js/mermaid-cli": "^11.4.2",
     "@tavily/core": "^0.3.1",
     "ai": "^4.1.61",

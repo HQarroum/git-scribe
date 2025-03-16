@@ -5,7 +5,8 @@ import { ConfirmInputSchema } from './schema.js';
 import { cancellable } from '../../utils/prompt.js';
 
 /**
- * The `confirm-question` tool.
+ * The `confirm-question` provides an LLM with the ability
+ * to ask for confirmation questions to the user through the terminal.
  */
 export const confirmQuestion = tool({
   description: 'Prompts the user to confirm a yes/no question.',

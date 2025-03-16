@@ -1,18 +1,18 @@
 import { SearchImageInputSchema } from './schema.js';
-import { tavily } from '@tavily/core';
+import { tavily, TavilyClient } from '@tavily/core';
 import { tool } from 'ai';
 
 /**
- * Creates a new Tavily client.
+ * @returns {TavilyClient} a new Tavily client.
  */
-const createClient = () => {
+const createClient = (): TavilyClient => {
   return (tavily({
     apiKey: process.env.TAVILY_API_KEY!
   }));
 };
 
 /**
- * Represents an image returned by Tavily.
+ * The type of an image returned by Tavily.
  */
 type TavilyImage = {
   url: string;
@@ -21,9 +21,9 @@ type TavilyImage = {
 
 /**
  * Searches for images on the web relevant to a search query.
- * @param query The search query.
- * @param opts The search options.
- * @returns The images found.
+ * @param {string} query The search query.
+ * @param {object} opts The search options.
+ * @returns {Promise<TavilyImage[]>} an array of found images.
  */
 export const searchImagesAsync = async (query: string, opts = { per_page: 10 }) => {
   const res = await createClient()
@@ -36,10 +36,10 @@ export const searchImagesAsync = async (query: string, opts = { per_page: 10 }) 
 };
 
 /**
- * Finds the best image for a search query.
- * @param query The search query.
- * @param opts The search options.
- * @returns The best image found, or `null` if none are suitable.
+ * @param {string} query The search query.
+ * @param {object} opts The search options.
+ * @returns {Promise<TavilyImage | null>} the best image found for a search query, or `null` if no
+ * images were relevant to the search query.
  */
 export const findBestImage = async (query: string, opts = { maxCandidates: 10 }) => {
   const images: TavilyImage[] = await searchImagesAsync(query, { per_page: opts.maxCandidates });
@@ -47,7 +47,8 @@ export const findBestImage = async (query: string, opts = { maxCandidates: 10 })
 };
 
 /**
- * The `search-image` tool.
+ * The `search-image` tool allows LLMs to issue image searches
+ * on the web using search queries.
  */
 export const searchImage = tool({
   description: 'Searches for images on the web relevant to a search query.',

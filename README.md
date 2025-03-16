@@ -77,7 +77,7 @@ Git Scribe implements a chain-of-agents to analyze a Git repository, issue resea
 ### Using `npm`
 
 ```bash
-npm install -g @ai/git-scribe
+npm install -g git-scribe-cli
 ```
 
 ### Environment

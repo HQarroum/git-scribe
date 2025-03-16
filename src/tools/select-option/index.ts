@@ -5,7 +5,8 @@ import { SelectOptionInputSchema } from './schema.js';
 import { cancellable } from '../../utils/prompt.js';
 
 /**
- * The `select-option` tool.
+ * The `select-option` tool allows LLMs to prompt users to select
+ * a single answer from a list of options.
  */
 export const selectOption = tool({
   description: 'Prompts the user to select a single answer from a list.',
