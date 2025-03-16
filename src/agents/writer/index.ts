@@ -65,7 +65,7 @@ export const writeSection = async ({
       scrapeWebsite
     },
     maxSteps: 5,
-    maxTokens: 10_000
+    maxTokens: 5000
   });
 
   // Verify whether Mermaid diagrams are valid and attempt to

@@ -92,7 +92,11 @@ export const packageRepository = async ({ source }: { source: string }) => {
     ], {
       output: {
         ...outputOptions,
-        filePath: path.join(tempDir, FILE_NAME)
+        filePath: path.join(tempDir, FILE_NAME),
+        git: {
+          sortByChanges: true,
+          sortByChangesMaxCommits: 100
+        }
       },
       include: [],
       ignore: {

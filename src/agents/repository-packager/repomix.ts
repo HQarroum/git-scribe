@@ -51,7 +51,7 @@ export const outputOptions = {
   directoryStructure: false,
   removeComments: false,
   removeEmptyLines: true,
-  topFilesLength: 20,
+  topFilesLength: 5,
   showLineNumbers: false,
   copyToClipboard: false,
   includeEmptyDirectories: false,

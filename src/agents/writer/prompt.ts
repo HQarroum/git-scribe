@@ -19,17 +19,12 @@ Markdown:
 - Favor a rich document, use the power of Markdown to make the blog post engaging, informative and visual (tables, images, diagrams, etc.) when applicable.
 - Make use of code blocks with the programming language name (e.g \`\`\`python\`) when you need to include code snippets in the section you are writing.
 - Use tables when you need to present data in a structured way.
-- Use images when you need to illustrate a concept or a point.
 - Use Mermaid diagrams when you need to illustrate a process or a flow.
 - When you need to emphasize a word or a sentence, use bold or italic text, for technical terms use \`backticks\`.
 - When adding important information, quotes, or remarks use the blockquote syntax (e.g > This is a blockquote). You can even add an emoji at the beginning of the blockquote.
 - Use math inline for math expressions (e.g $x^2$).
 - Add as many link references as possible.
 - Use task lists when you need to present a list of tasks to be done (i.e - "[ ] Add delight to the experience when all tasks are complete").
-
-Images:
-- Always add a relevant image at the beginning of the introduction that is relevant to the subject of the article.
-- To search for relevant images URLs, you can use the \`search-image\` tool to find a relevant image based on a search query with keywords.
 
 Mermaid Diagrams:
 - Do not include newlines, parentheses, quotes, commas, or colons in the name of nodes in the mermaid code, this will break the diagram syntax.
