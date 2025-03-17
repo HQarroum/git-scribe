@@ -2,6 +2,7 @@ import { provider } from '../../providers.js';
 import { generateText } from 'ai';
 import { PlanOutputSchema } from './schema.js';
 import { DocumentType } from '../../data-models/document-type.js';
+import { PlanResult } from '../../data-models/plan-result.js';
 
 import {
   CREATE_PLAN_SYSTEM_PROMPT,
@@ -33,9 +34,12 @@ export const createPlan = async ({
     experimental_output: PlanOutputSchema
   });
 
+  // Cast improperly exported type.
+  const output = experimental_output as PlanResult;
+
   return ({
     documentType,
     usage,
-    ...experimental_output
+    ...output
   });
 };

@@ -3,6 +3,8 @@
     "target": "es2022",
     "module": "NodeNext",
     "lib": ["es2020"],
+    "declaration": true,
+    "declarationMap": true,
     "moduleResolution": "nodenext",
     "esModuleInterop": true,
     "resolveJsonModule": true,

@@ -4,6 +4,7 @@
   "description": "Chain-of-Agents based article generation based on repository analysis.",
   "type": "module",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "bin": {
     "git-scribe": "dist/index.js"
   },
@@ -11,7 +12,11 @@
     "access": "public"
   },
   "scripts": {
+    "prepublishOnly": "npm run build",
     "build": "tsc",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "prepare": "npm run build",
     "deploy": "npm publish ."
   },
   "files": [
@@ -29,6 +34,10 @@
   "author": "Halim Qarroum <hqm.post@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/HQarroum/git-scribe",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HQarroum/git-scribe.git"
+  },
   "bugs": {
     "url": "https://github.com/HQarroum/git-scribe/issues"
   },

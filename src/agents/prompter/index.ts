@@ -1,6 +1,7 @@
 import { provider } from '../../providers.js';
-import { generateText } from 'ai';
+import { generateText, Tool } from 'ai';
 import { PromptSchema } from './schema.js';
+import { PromptResult } from '../../data-models/prompt-result.js';
 
 import {
   PROMPT_USER_SYSTEM_PROMPT,
@@ -32,12 +33,15 @@ export const promptUser = async () => {
     maxSteps: 15
   });
 
+  // Cast improperly exported type.
+  const output = experimental_output as PromptResult;
+
   // Throw if the extraction was not successful.
-  if (!experimental_output.success) {
+  if (!output.success) {
     throw new Error('The extraction of the information from the user was not successful.');
   }
   return ({
-    instructions: experimental_output.document,
+    instructions: output.document,
     usage
   });
 };

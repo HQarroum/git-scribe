@@ -4,6 +4,7 @@ import { searchWeb } from '../../tools/search-web/index.js';
 import { scrapeWebsite } from '../../tools/scrape-website/index.js';
 import { ReviewOutputSchema } from './schema.js';
 import { Plan } from '../../data-models/plan.js';
+import { Review } from '../../data-models/review.js';
 
 import {
   REVIEWER_SYSTEM_PROMPT,
@@ -42,5 +43,5 @@ export const createReview = async ({
     experimental_output: ReviewOutputSchema
   });
 
-  return (result.experimental_output);
+  return (result.experimental_output as Review);
 };
