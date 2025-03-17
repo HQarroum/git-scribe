@@ -57,7 +57,7 @@ export const cloneRepository = async ({ source }: { source: string }) => {
   if (!isUrl(source)) {
     throw new Error('The provided source is not a valid URL.');
   }
-  
+
   // Clone the repository locally.
   await (git as any)().clone(source, tempDir);
 
@@ -74,7 +74,7 @@ export const packageRepository = async ({ source }: { source: string }) => {
 
   try {
     // Create temporary directory to store the output.
-    const dirPath = path.join(os.tmpdir(), 'GIT_ARTICLE');
+    const dirPath = path.join(os.tmpdir(), 'GIT_SCRIBE');
     tempDir = fs.mkdtempSync(dirPath);
 
     if (isUrl(source)) {
@@ -140,14 +140,14 @@ export const getRepositoryCode = async ({ source }: { source: string }) => {
   let cropped = false;
 
   // If the `totalTokens` is zero, it means the token count is unknown.
+  // In this case, we resort to an estimation based on the character count.
   if (totalTokens === 0) {
     totalTokens = Math.round(content.length / CHARS_PER_TOKEN);
   }
 
-  // Ensure the size is not larger than the allowed limit.
   if (totalTokens > TOKEN_LIMIT) {
     // Limit the size of the repository considering a token is
-    // approximately 4 characters in the english language.
+    // approximately 4 characters in repositories.
     content = content.substring(0, TOKEN_LIMIT * CHARS_PER_TOKEN);
     try {
       totalTokens = encoding.encode(content).length;

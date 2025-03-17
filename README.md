@@ -72,6 +72,8 @@ Git Scribe implements a chain-of-agents to analyze a Git repository, issue resea
   <img width="900" src="assets/diagram.png" alt="flow" />
 </p>
 
+Git Scribe implements a prompt compression technique by using a **Researcher Agent** that produces a detailed research and bibliography of the repository. In addition, it also elects the most relevant code (up to 15k tokens) to be used by the **Writers** in order to reduce the input token consumption of agents further down the chain.
+
 ## 🚀 Quickstart
 
 ### Using `npm`
