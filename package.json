@@ -47,7 +47,7 @@
     "@mendable/firecrawl-js": "^1.19.2",
     "@mermaid-js/mermaid-cli": "^11.4.2",
     "@tavily/core": "^0.3.1",
-    "ai": "^4.1.61",
+    "ai": "^5.0.43",
     "cli-table3": "^0.6.5",
     "commander": "^13.1.0",
     "gradient-string": "^3.0.0",
